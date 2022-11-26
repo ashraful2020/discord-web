@@ -1,0 +1,28 @@
+.login {
+  width: 100%;
+  height: 100%;
+}
+.login_logo > img {
+  height: 450px;
+  width: 100%;
+  object-fit: contain;
+}
+.login_logo {
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+}
+.login_btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  font-size: 25px;
+  padding: 10px 30px;
+  border-radius: 2px;
+  width: 250px;
+  border: none;
+  background: rgb(201, 201, 201);
+}

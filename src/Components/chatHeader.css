@@ -1,0 +1,45 @@
+.chatHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: gray;
+  padding: 10px;
+}
+.chatHeader_hash {
+  font-size: 30px;
+  color: gray;
+  padding: 10px;
+}
+.chatHeader_left > h3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.chatHeader_right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 0.5;
+  color: gray;
+}
+.chatHeader_right > svg {
+  font-size: 20px;
+}
+.chatHeader_right > svg:hover {
+  color: white;
+}
+
+.chatHeader_search {
+  display: flex;
+  align-items: center;
+  color: gray;
+  background-color: #2f3135;
+  border-radius: 3px;
+  padding: 3px;
+}
+.chatHeader_search > input {
+  background-color: transparent;
+  outline-width: 0;
+  color: white;
+  border: none;
+}

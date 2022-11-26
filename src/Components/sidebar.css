@@ -1,0 +1,137 @@
+.expandMoreIcon {
+  font-size: 20px;
+}
+.sidebar_serverMenu {
+  display: flex;
+  flex-direction: column;
+  flex: 0.03;
+  min-height: 100vh;
+  background-color: #202225;
+  color: white;
+  padding: 10px;
+}
+
+.discord_logo {
+  width: 60px;
+  height: 60px;
+  background: white;
+  /* padding: 10px; */
+  border-radius: 50%;
+}
+
+.discord_logo:hover {
+  background: #000;
+}
+.sidebar_serverMenu > svg {
+  height: 60px;
+  width: 60px;
+  color: #3ba55d;
+  background-color: #36393f;
+  margin: 0 auto;
+  padding: 15px;
+  margin-top: 10px;
+  border-radius: 50%;
+}
+.sidebar_serverMenu > svg:hover {
+  background-color: #3ba55d;
+  color: white;
+}
+
+.sidebar_main {
+  display: flex;
+  flex-direction: column;
+  flex: 0.17;
+  min-height: 100vh;
+  background-color: #2f3135;
+  color: white;
+  padding: 20px;
+}
+
+.sidebar_top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  border-bottom: 2px solid black;
+}
+
+.sidebar_channel {
+  flex: 1;
+}
+.sidebar_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sidebar_channelHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+.sidebar_addChannel {
+  font-size: 18px;
+  color: white;
+}
+
+.sidebar_voice {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  color: gray;
+  background-color: #2f3135;
+  border-top: 2px solid gray;
+}
+
+.sidebar_signalIcon {
+  font-size: 20px;
+  color: rgb(37, 149, 37);
+}
+.sidebar_voiceInfo {
+  flex: 1;
+  padding: 10px;
+}
+.sidebar_voiceInfo > h4 {
+  color: rgb(37, 149, 37);
+}
+.sidebar_voiceInfo > p {
+  font-size: smaller;
+}
+.sidebar_voiceIcons > svg {
+  font-size: 20px;
+}
+.sidebar_voiceIcons {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar_profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 3px solid gray;
+  color: gray;
+  padding: 10px;
+}
+.sidebar_profileIcon {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  text-align: center;
+  color: white;
+}
+.sidebar_profileInfo {
+  flex: 1;
+  padding: 10px;
+}
+.sidebar_profileInfo > p {
+  font-size: smaller;
+}
+.sidebar_profileIcons {
+  display: flex;
+  flex-direction: column;
+}
+.sidebar_profileIcons > svg {
+  font-size: 20px;
+}
