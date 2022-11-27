@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
 import { useDispatch } from 'react-redux';
-import { setChannelInfo } from '../features/appSlice';
+import { setChannelInfo } from '../../features/appSlice';
 import "./sidebar_channel.css"
 const SidebarChannel = memo(({ id, channelName }) => {
     const dispatch = useDispatch()

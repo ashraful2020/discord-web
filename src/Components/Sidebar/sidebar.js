@@ -4,15 +4,16 @@ import "./sidebar.css"
 import { AiOutlinePlus, AiFillSignal, AiOutlineInfoCircle, AiFillSetting } from 'react-icons/ai';
 import { MdExpandMore, MdKeyboardVoice, MdHeadphones } from 'react-icons/md';
 import { IoIosCall } from 'react-icons/io';
-import { selectUser } from '../features/userSlice';
+import { selectUser } from '../../features/userSlice';
 import { useSelector } from 'react-redux';
-import db from '../firebaseConfig';
+import db, { auth } from '../../firebaseConfig';
 import SideBarServerMenu from './sideBarServerMenu';
-import { selectChannelId, selectServerId, selectServerName } from '../features/appSlice';
+import { selectChannelId, selectServerId, selectServerName } from '../../features/appSlice';
 
 const Sidebar = memo(() => {
 
     const user = useSelector(selectUser);
+    console.log(user.photo)
     const channelId = useSelector(selectChannelId)
     const serverId = useSelector(selectServerId)
     const serverName = useSelector(selectServerName);
@@ -27,20 +28,6 @@ const Sidebar = memo(() => {
             })
         }
 
-        // db.collection('channels').onSnapshot(snapshot => {
-        //     setChannels(snapshot.docs.map(doc => ({
-        //         id: doc.id,
-        //         channel: doc.data()
-        //     })))
-        // });
-
-        // if (serverId) {
-        //     db.collection('server').doc(serverId).onSnapshot(snapshot => {
-        //         setMessages(
-        //             snapshot?.docs?.map((doc) => doc.data())
-        //         )
-        //     })
-        // }
     }, [serverId, serverName]);
 
     const handleAddChannel = () => {
@@ -85,8 +72,8 @@ const Sidebar = memo(() => {
                         <IoIosCall className='sidebar_callIcon' />
                     </div>
                 </div>
-                <div className="sidebar_profile">
-                    <img src={user?.photo} alt="profile " className='sidebar_profileIcon' />
+                <div className="sidebar_profile" onClick={()=>auth.signOut(res=>{console.log(res)})}>
+                    <img src={user.photo} alt="profile" className='sidebar_profileIcon' />
                     <div className="sidebar_profileInfo">
                         <h5>{user?.displayName} </h5>
                         <p>@{user.uid.substring(0, 10)}</p>

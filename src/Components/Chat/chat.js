@@ -2,14 +2,14 @@ import React, { memo, useEffect, useState } from 'react';
 import { AiFillGift, AiFillPlusCircle, AiOutlineGif } from "react-icons/ai";
 import { BsFillEmojiSmileFill } from "react-icons/bs";
 import { useSelector } from 'react-redux';
-import { selectChannelId, selectChannelName, selectServerId, selectServerName } from '../features/appSlice';
-import { selectUser } from '../features/userSlice';
-import db from '../firebaseConfig';
+import { selectChannelId, selectChannelName, selectServerId, selectServerName } from '../../features/appSlice';
+import { selectUser } from '../../features/userSlice';
+import db from '../../firebaseConfig';
 import "./chat.css";
 import ChatHeader from './chatHeader';
-import Message from './message';
+import Message from '../messages/message';
 import firebase from 'firebase/compat/app';
-import image from "../assets/Discord-logo-removebg-preview.png"
+import image from "../../assets/Discord-logo-removebg-preview.png"
 
 const Chat = memo(() => {
     const user = useSelector(selectUser);
