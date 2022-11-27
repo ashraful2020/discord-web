@@ -40,8 +40,8 @@
 .sidebar_main {
   display: flex;
   flex-direction: column;
-  flex: 0.17;
-  min-height: 100vh;
+  flex: 0.13;
+  max-height: 100vh;
   background-color: #2f3135;
   color: white;
   padding: 20px;
@@ -56,29 +56,49 @@
 }
 
 .sidebar_channel {
-  flex: 1;
+  flex: 1; 
 }
 .sidebar_header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-}
+  justify-content: space-around;  
+} 
+
 .sidebar_channelHeader {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px;
+  padding: 1px;
 }
 .sidebar_addChannel {
   font-size: 18px;
   color: white;
+}
+.sidebar_channelList{
+  max-height:500px;
+  position: relative;
+  /* overflow-y: scroll; */
+  overflow-y: auto;
+  /* overflow: scroll; */
+}
+.sidebar_channelList::-webkit-scrollbar {
+  width: 2px;
+}
+
+.sidebar_channelList::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+.sidebar_channelList::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
 }
 
 .sidebar_voice {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px;
+  padding: 1px;
   color: gray;
   background-color: #2f3135;
   border-top: 2px solid gray;
@@ -111,8 +131,8 @@
   align-items: center;
   justify-content: center;
   border-top: 3px solid gray;
-  color: gray;
-  padding: 10px;
+  color: gray; 
+  padding: 4px;
 }
 .sidebar_profileIcon {
   height: 50px;
@@ -123,7 +143,7 @@
 }
 .sidebar_profileInfo {
   flex: 1;
-  padding: 10px;
+  padding-left: 5px;
 }
 .sidebar_profileInfo > p {
   font-size: smaller;

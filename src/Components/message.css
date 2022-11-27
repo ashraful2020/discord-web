@@ -1,9 +1,12 @@
 .message {
   display: flex;
   align-items: center;
+  padding: 5px;
   padding-left: 20px;
-  padding-top: 10px;
   color: white;
+}
+.message:hover{
+  background-color: #474849;
 }
 .message_profileIcon {
   width: 40px;

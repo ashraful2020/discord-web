@@ -2,10 +2,10 @@
   display: flex;
   flex-direction: column;
   flex: 0.03;
-  min-height: 100vh;
+  max-height: 100vh;
   background-color: #202225;
   color: white;
-  padding: 10px;
+  padding: 5px;
 }
 
 .discord_logo {

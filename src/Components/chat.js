@@ -2,7 +2,7 @@ import React, { memo, useEffect, useState } from 'react';
 import { AiFillGift, AiFillPlusCircle, AiOutlineGif } from "react-icons/ai";
 import { BsFillEmojiSmileFill } from "react-icons/bs";
 import { useSelector } from 'react-redux';
-import { selectChannelId, selectChannelName } from '../features/appSlice';
+import { selectChannelId, selectChannelName, selectServerId, selectServerName } from '../features/appSlice';
 import { selectUser } from '../features/userSlice';
 import db from '../firebaseConfig';
 import "./chat.css";
@@ -17,6 +17,9 @@ const Chat = memo(() => {
     const channelName = useSelector(selectChannelName);
     const [input, setInput] = useState("");
     const [messages, setMessages] = useState([]);
+    const serverId = useSelector(selectServerId)
+    const serverName = useSelector(selectServerName);
+
     useEffect(() => {
         if (channelId) {
             db.collection('channels').doc(channelId).collection("messages").orderBy("timestamp", 'desc')
@@ -36,8 +39,7 @@ const Chat = memo(() => {
             user: user
         });
         setInput("")
-    }
-    console.log(channelId, channelName, "Hi there")
+    } 
     return (
         <>
             {
